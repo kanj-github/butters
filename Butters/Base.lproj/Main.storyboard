@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZWc-if-hrJ">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Butters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VxT-p5-Q1V">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzE-Zb-8q5">
-                                <rect key="frame" x="16" y="84" width="343" height="30"/>
+                                <rect key="frame" x="16" y="84" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="goM-QR-6UO"/>
                                 </constraints>
@@ -27,21 +27,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq8-hG-qfH">
-                                <rect key="frame" x="16" y="154" width="343" height="393"/>
-                                <string key="text">All messages from alphabetic senders are marked as spam unless whitelisted. Senders can be whitelisted by adding the whole or part of the name. For example add ABC to whitelist messages from ABC, XABCX, etc.
-
-Butters does not use internet. Your messages will not be sent to any server.
-
-You'll need to enable this filter in Settings &gt; Messages &gt; Unknown &amp; Spam &gt; Butters
-
-Consider reading the information provided there while you're at it.</string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8X2-Cq-vUw">
-                                <rect key="frame" x="16" y="587" width="343" height="40"/>
+                                <rect key="frame" x="16" y="488" width="288" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="isl-qq-4TF"/>
                                 </constraints>
@@ -51,19 +38,36 @@ Consider reading the information provided there while you're at it.</string>
                                     <segue destination="bWd-sJ-zma" kind="show" id="nCd-Pl-kqj"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="tmu-bA-g76">
+                                <rect key="frame" x="16" y="154" width="288" height="294"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">All messages from alphabetic senders are marked as spam unless whitelisted. Senders can be whitelisted by adding the whole or part of the name. For example add ABC to whitelist messages from ABC, XABCX, etc.
+
+Butters does not use internet. Your messages will not be sent to any server.
+
+You'll need to enable this filter in Settings &gt; Messages &gt; Unknown &amp; Spam &gt; Butters
+
+Consider reading the information provided there while you're at it.
+
+Source code of this app can be found at
+https://github.com/kanj-github/butters</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FTu-H4-FAi" firstAttribute="trailing" secondItem="8X2-Cq-vUw" secondAttribute="trailing" constant="16" id="26V-ck-DFO"/>
-                            <constraint firstItem="sq8-hG-qfH" firstAttribute="trailing" secondItem="tzE-Zb-8q5" secondAttribute="trailing" id="FsA-TH-1Cz"/>
-                            <constraint firstItem="8X2-Cq-vUw" firstAttribute="top" secondItem="sq8-hG-qfH" secondAttribute="bottom" constant="40" id="JcN-BC-RYS"/>
+                            <constraint firstItem="FTu-H4-FAi" firstAttribute="trailing" secondItem="tmu-bA-g76" secondAttribute="trailing" constant="16" id="8Lr-Bo-l0R"/>
+                            <constraint firstItem="tmu-bA-g76" firstAttribute="top" secondItem="tzE-Zb-8q5" secondAttribute="bottom" constant="40" id="FmC-J1-dGc"/>
                             <constraint firstItem="FTu-H4-FAi" firstAttribute="bottom" secondItem="8X2-Cq-vUw" secondAttribute="bottom" constant="40" id="Ru6-YC-c4R"/>
                             <constraint firstItem="FTu-H4-FAi" firstAttribute="trailing" secondItem="tzE-Zb-8q5" secondAttribute="trailing" constant="16" id="SQS-oa-FVU"/>
                             <constraint firstItem="tzE-Zb-8q5" firstAttribute="leading" secondItem="FTu-H4-FAi" secondAttribute="leading" constant="16" id="dIC-zx-gUe"/>
-                            <constraint firstItem="sq8-hG-qfH" firstAttribute="leading" secondItem="tzE-Zb-8q5" secondAttribute="leading" id="euG-Cl-deV"/>
+                            <constraint firstItem="8X2-Cq-vUw" firstAttribute="top" secondItem="tmu-bA-g76" secondAttribute="bottom" constant="40" id="i9E-u1-vbm"/>
+                            <constraint firstItem="tmu-bA-g76" firstAttribute="leading" secondItem="FTu-H4-FAi" secondAttribute="leading" constant="16" id="msx-gY-8DF"/>
                             <constraint firstItem="tzE-Zb-8q5" firstAttribute="top" secondItem="FTu-H4-FAi" secondAttribute="top" constant="20" id="sqU-Tt-qRs"/>
                             <constraint firstItem="8X2-Cq-vUw" firstAttribute="leading" secondItem="FTu-H4-FAi" secondAttribute="leading" constant="16" id="t04-R4-Hhz"/>
-                            <constraint firstItem="sq8-hG-qfH" firstAttribute="top" secondItem="tzE-Zb-8q5" secondAttribute="bottom" constant="40" id="ybp-8R-sGo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FTu-H4-FAi"/>
                     </view>
@@ -78,15 +82,15 @@ Consider reading the information provided there while you're at it.</string>
             <objects>
                 <tableViewController id="bWd-sJ-zma" customClass="TableViewController" customModule="Butters" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KnB-aL-pgQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="id" id="76e-hh-2ST">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="76e-hh-2ST" id="Zhb-vx-wyc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -119,7 +123,7 @@ Consider reading the information provided there while you're at it.</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZWc-if-hrJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VEv-go-aOu">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
