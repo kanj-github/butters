@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old Man and the Sea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzE-Zb-8q5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzE-Zb-8q5">
                                 <rect key="frame" x="16" y="84" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="goM-QR-6UO"/>
@@ -29,8 +29,14 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq8-hG-qfH">
                                 <rect key="frame" x="16" y="154" width="343" height="393"/>
-                                <string key="text">Long multiline text. This text tells the story of a fisher. The fisher man's name is Old Man. One day he went to the sea to catch fish. But he couldn't catch any fish the whole day. He felt very bad. There was also going to be some kind of storm that day. Overall he was feeling pretty depressed. Just as he was going to give up and return home. He caught a big ass fish that couldn't fit on his small boat.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <string key="text">All messages from alphabetic senders are marked as spam unless whitelisted. Senders can be whitelisted by adding the whole or part of the name. For example add ABC to whitelist messages from ABC, XABCX, etc.
+
+Butters does not use internet. Your messages will not be sent to any server.
+
+You'll need to enable this filter in Settings &gt; Messages &gt; Unknown &amp; Spam &gt; Butters
+
+Consider reading the information provided there while you're at it.</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,7 +46,7 @@
                                     <constraint firstAttribute="height" constant="40" id="isl-qq-4TF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="See the fish caught by Old Man"/>
+                                <state key="normal" title="View Whitelist"/>
                                 <connections>
                                     <segue destination="bWd-sJ-zma" kind="show" id="nCd-Pl-kqj"/>
                                 </connections>
