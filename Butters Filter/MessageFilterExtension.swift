@@ -18,26 +18,34 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
             return self.block(completion: completion)
         }
         
-        var containsLetter = false
+        var isSpammer = false
         let letters = CharacterSet.letters
-        for uni in sender.unicodeScalars {
-            if letters.contains(uni) {
-                containsLetter = true
-                break
+
+        if sender.count < 8 {
+            // Normal mobile numbers are expected to have atleast 8 characters
+            isSpammer = true
+        } else {
+            // Spammers has alphabetical "number"
+            for uni in sender.unicodeScalars {
+                if letters.contains(uni) {
+                    isSpammer = true
+                    break
+                }
             }
         }
-        
-        if !containsLetter {
+
+
+        if !isSpammer {
             return self.allow(completion: completion)
         } else {
-            let whitelist = UserDefaults.standard.stringArray(forKey: "STUFF")
+            let whitelist = UserDefaults(suiteName: "group.butters")?.stringArray(forKey: "STUFF")
             whitelist?.forEach({ (stuff) in
-                if sender.contains(stuff) {
-                    return allow(completion: completion)
+                if sender.contains(stuff.lowercased()) {
+                    return self.allow(completion: completion)
                 }
             })
         }
-        
+
         return self.block(completion: completion)
     }
     

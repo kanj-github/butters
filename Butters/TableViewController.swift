@@ -12,7 +12,7 @@ class TableViewController: UITableViewController {
     
     //MARK: Properties
     @IBOutlet weak var addButton: UIBarButtonItem!
-    let userDefaults = UserDefaults.standard
+    let userDefaults = UserDefaults(suiteName: "group.butters")
     var items = [String]()
 
     override func viewDidLoad() {
@@ -22,11 +22,13 @@ class TableViewController: UITableViewController {
         self.editButtonItem.title = "Delete"
         self.navigationItem.rightBarButtonItem = self.editButtonItem
 
-        userDefaults.stringArray(forKey: "STUFF")?.forEach({ (it) in
+        userDefaults?.stringArray(forKey: "STUFF")?.forEach({ (it) in
             items.append(it)
         })
         
         navigationController?.setToolbarHidden(false, animated: true)
+
+        tableView.allowsSelection = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -96,7 +98,7 @@ class TableViewController: UITableViewController {
     }
 
     private func saveStuff(stuff: [String]) {
-        userDefaults.set(stuff, forKey: "STUFF")
+        userDefaults?.set(stuff, forKey: "STUFF")
     }
     
     private func addStuff(text: String) {

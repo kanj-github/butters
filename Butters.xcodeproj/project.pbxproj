@@ -49,6 +49,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BA9500CF214E15C400D33D56 /* Butters.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Butters.entitlements; sourceTree = "<group>"; };
+		BA9500D0214E162A00D33D56 /* Butters Filter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Butters Filter.entitlements"; sourceTree = "<group>"; };
 		BAD68AE5214BA9030042C6A5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BAD68AEB214BC1B40042C6A5 /* Butters Filter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Butters Filter.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD68AED214BC1B40042C6A5 /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		BAD68AEC214BC1B40042C6A5 /* Butters Filter */ = {
 			isa = PBXGroup;
 			children = (
+				BA9500D0214E162A00D33D56 /* Butters Filter.entitlements */,
 				BAD68AED214BC1B40042C6A5 /* MessageFilterExtension.swift */,
 				BAD68AEF214BC1B40042C6A5 /* Info.plist */,
 			);
@@ -121,6 +124,7 @@
 		BAE7C812214B6C3900844220 /* Butters */ = {
 			isa = PBXGroup;
 			children = (
+				BA9500CF214E15C400D33D56 /* Butters.entitlements */,
 				BAE7C813214B6C3900844220 /* AppDelegate.swift */,
 				BAE7C815214B6C3900844220 /* ViewController.swift */,
 				BAE7C817214B6C3900844220 /* Main.storyboard */,
@@ -209,9 +213,19 @@
 				TargetAttributes = {
 					BAD68AEA214BC1B40042C6A5 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					BAE7C80F214B6C3900844220 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					BAE7C823214B6C3A00844220 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -322,6 +336,7 @@
 		BAD68AF4214BC1B40042C6A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Butters Filter/Butters Filter.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7M524HZ2T;
 				INFOPLIST_FILE = "Butters Filter/Info.plist";
@@ -341,6 +356,7 @@
 		BAD68AF5214BC1B40042C6A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Butters Filter/Butters Filter.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7M524HZ2T;
 				INFOPLIST_FILE = "Butters Filter/Info.plist";
@@ -476,6 +492,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Butters/Butters.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7M524HZ2T;
 				INFOPLIST_FILE = Butters/Info.plist;
@@ -496,6 +513,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Butters/Butters.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7M524HZ2T;
 				INFOPLIST_FILE = Butters/Info.plist;
