@@ -18,7 +18,6 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.editButtonItem.title = "Delete"
         self.navigationItem.rightBarButtonItem = self.editButtonItem
 
@@ -26,6 +25,8 @@ class TableViewController: UITableViewController {
             items.append(it)
         })
         
+        setDeleteButtonState()
+
         navigationController?.setToolbarHidden(false, animated: true)
 
         tableView.allowsSelection = false
@@ -44,6 +45,9 @@ class TableViewController: UITableViewController {
         super.setEditing(editing, animated: animated)
         self.editButtonItem.title = editing ? "Done" : "Delete"
         self.addButton.isEnabled = !editing
+        if !editing {
+            setDeleteButtonState()
+        }
     }
 
     // MARK: Actions
@@ -105,6 +109,10 @@ class TableViewController: UITableViewController {
         items.append(text)
         saveStuff(stuff: items)
         tableView.reloadData()
+        setDeleteButtonState()
     }
     
+    private func setDeleteButtonState() {
+        self.editButtonItem.isEnabled = items.count > 0
+    }
 }
