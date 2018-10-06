@@ -104,14 +104,15 @@ class TableViewController: UITableViewController {
     private func saveStuff(stuff: [String]) {
         userDefaults?.set(stuff, forKey: "STUFF")
     }
-    
+
     private func addStuff(text: String) {
-        items.append(text)
+        let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        items.append(trimmedText)
         saveStuff(stuff: items)
         tableView.reloadData()
         setDeleteButtonState()
     }
-    
+
     private func setDeleteButtonState() {
         self.editButtonItem.isEnabled = items.count > 0
     }

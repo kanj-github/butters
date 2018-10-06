@@ -41,7 +41,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="tmu-bA-g76">
                                 <rect key="frame" x="16" y="154" width="288" height="294"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">All messages from "numbers" with less than 8 digits or containing alphabets are marked as spam unless whitelisted. Senders can be whitelisted by adding the whole or part of the name. For example add ABC to whitelist messages from ABC, XABCX, etc.
+                                <string key="text">All messages from "numbers" with less than 8 digits or containing alphabets are marked as spam unless whitelisted. Messages can be whitelisted by adding keywords which may be contained in the sender or content.
 
 Butters does not use internet. Your messages will not be sent to any server.
 
@@ -50,7 +50,6 @@ You'll need to enable this filter in Settings &gt; Messages &gt; Unknown &amp; S
 Consider reading the information provided there while you're at it.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

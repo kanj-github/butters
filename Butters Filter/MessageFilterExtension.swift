@@ -39,8 +39,9 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
             return self.allow(completion: completion)
         } else {
             let whitelist = UserDefaults(suiteName: "group.butters")?.stringArray(forKey: "STUFF")
+            let messageContent = sender + " " + (queryRequest.messageBody ?? "")
             whitelist?.forEach({ (stuff) in
-                if sender.contains(stuff.lowercased()) {
+                if messageContent.lowercased().contains(stuff.lowercased()) {
                     return self.allow(completion: completion)
                 }
             })
