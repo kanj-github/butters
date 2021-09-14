@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA80498B265387BE005C61B3 /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD68AED214BC1B40042C6A5 /* MessageFilterExtension.swift */; };
 		BAD68AE6214BA9030042C6A5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD68AE5214BA9030042C6A5 /* TableViewController.swift */; };
 		BAD68AEE214BC1B40042C6A5 /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD68AED214BC1B40042C6A5 /* MessageFilterExtension.swift */; };
 		BAD68AF2214BC1B40042C6A5 /* Butters Filter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BAD68AEB214BC1B40042C6A5 /* Butters Filter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -49,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BA804991265387BE005C61B3 /* Butters Filter copy.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Butters Filter copy.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA804992265387BE005C61B3 /* Butters Filter copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Butters Filter copy-Info.plist"; path = "/Users/kanj/code/personal/sms-filter/Butters/Butters Filter copy-Info.plist"; sourceTree = "<absolute>"; };
 		BA9500CF214E15C400D33D56 /* Butters.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Butters.entitlements; sourceTree = "<group>"; };
 		BA9500D0214E162A00D33D56 /* Butters Filter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Butters Filter.entitlements"; sourceTree = "<group>"; };
 		BAD68AE5214BA9030042C6A5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +70,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BA80498C265387BE005C61B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAD68AE8214BC1B40042C6A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,6 +118,7 @@
 				BAE7C827214B6C3A00844220 /* ButtersTests */,
 				BAD68AEC214BC1B40042C6A5 /* Butters Filter */,
 				BAE7C811214B6C3900844220 /* Products */,
+				BA804992265387BE005C61B3 /* Butters Filter copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +128,7 @@
 				BAE7C810214B6C3900844220 /* Butters.app */,
 				BAE7C824214B6C3A00844220 /* ButtersTests.xctest */,
 				BAD68AEB214BC1B40042C6A5 /* Butters Filter.appex */,
+				BA804991265387BE005C61B3 /* Butters Filter copy.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +159,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BA804989265387BE005C61B3 /* Butters Filter copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA80498E265387BE005C61B3 /* Build configuration list for PBXNativeTarget "Butters Filter copy" */;
+			buildPhases = (
+				BA80498A265387BE005C61B3 /* Sources */,
+				BA80498C265387BE005C61B3 /* Frameworks */,
+				BA80498D265387BE005C61B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Butters Filter copy";
+			productName = "Butters Filter";
+			productReference = BA804991265387BE005C61B3 /* Butters Filter copy.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		BAD68AEA214BC1B40042C6A5 /* Butters Filter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAD68AF3214BC1B40042C6A5 /* Build configuration list for PBXNativeTarget "Butters Filter" */;
@@ -249,11 +278,19 @@
 				BAE7C80F214B6C3900844220 /* Butters */,
 				BAE7C823214B6C3A00844220 /* ButtersTests */,
 				BAD68AEA214BC1B40042C6A5 /* Butters Filter */,
+				BA804989265387BE005C61B3 /* Butters Filter copy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BA80498D265387BE005C61B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAD68AE9214BC1B40042C6A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +317,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BA80498A265387BE005C61B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA80498B265387BE005C61B3 /* MessageFilterExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAD68AE7214BC1B40042C6A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +378,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BA80498F265387BE005C61B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Butters Filter/Butters Filter.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z7M524HZ2T;
+				INFOPLIST_FILE = "Butters Filter copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "apps.kanj.com.Butters.Butters-Filter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA804990265387BE005C61B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Butters Filter/Butters Filter.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z7M524HZ2T;
+				INFOPLIST_FILE = "Butters Filter copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "apps.kanj.com.Butters.Butters-Filter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BAD68AF4214BC1B40042C6A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -578,6 +665,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BA80498E265387BE005C61B3 /* Build configuration list for PBXNativeTarget "Butters Filter copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA80498F265387BE005C61B3 /* Debug */,
+				BA804990265387BE005C61B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BAD68AF3214BC1B40042C6A5 /* Build configuration list for PBXNativeTarget "Butters Filter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
